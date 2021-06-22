@@ -19,7 +19,7 @@ const Product = (props) => {
         <div className="card-body">
             <h5 className="card-title mb-4">{product_name} - {product_weight}</h5>
             <div className="d-flex">
-                <h4 className="card-text text-start">{product_price}</h4>
+                <h4 className="card-text text-start">${product_price}</h4>
                  <Link to={'/addProducts/'+_id} className="btn my-btn">Buy Now</Link>
             </div>
         </div>

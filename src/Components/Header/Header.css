@@ -4,8 +4,9 @@
 }
 
 .header .navbar{
-    background-color: #6946F4;
+    background-color: #60b658;
     padding: 15px;
+    border-radius: 10px;
 }
 .header .navbar .brand-logo{
     font-size: 30px;
@@ -39,7 +40,7 @@
 }
 
 .header .nav-item .nav-link.login-btn {
-    background-color: #1e038b !important;
+    background-color: #073103 !important;
 }
 
 .header .navbar-nav{

@@ -1,5 +1,5 @@
 .my-btn {
-  background-color: #6946F4 !important;
+  background-color: #60b658 !important;
   color: white !important;
   padding: 10px 20px;
   border-radius: 5px;
@@ -10,5 +10,5 @@
 }
 
 .my-btn:hover{
-  background-color: #4319e9 !important;
+  background-color: #3a8f32!important;
 }
