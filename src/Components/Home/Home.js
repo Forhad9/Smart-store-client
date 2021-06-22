@@ -11,8 +11,8 @@ const Home = () => {
         setLoading(true)
         setTimeout(() => {
             setLoading(false)
-        }, 5000)
-        fetch('http://localhost:4500/addProduct')
+        }, 3000)
+        fetch('https://blooming-gorge-50916.herokuapp.com/addProduct')
             .then(res => res.json())
             .then(data =>setProducts(data))
     }, [])

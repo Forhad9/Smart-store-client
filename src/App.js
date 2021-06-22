@@ -10,7 +10,6 @@ import Header from './Components/Header/Header';
 import { createContext, useState } from 'react';
 import Login from './Components/Login/Login';
 import Admin from './Components/Admin/Admin';
-import AddProduct from './Components/AddProduct/AddProduct';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 import Checkout from './Components/Checkout/Checkout';
 import Orders from './Components/Orders/Orders';
@@ -20,15 +19,6 @@ export const UserContext = createContext();
 function App() {
 
   const [loggedInUser, setLoggedInUser] = useState({})
-
-//    const handleAddProducts = () => {
-//      fetch('https://the-daily-shop-server.herokuapp.com/addProduct', {
-//         method: 'POST',
-//          headers: { 'Content-Type': 'application/json'},
-//          body: JSON.stringify(fakeData)
-//     })
-//     .then(res => res.json())
-//  }
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
@@ -41,12 +31,12 @@ function App() {
       <Route exact path="/">
         <Home></Home>
       </Route>          
-      <Route path="/admin">
+      <PrivateRoute path="/admin">
         <Admin></Admin>
-      </Route>
-      <Route path="/addProducts/:productId">
+      </PrivateRoute>
+      <PrivateRoute path="/addProducts/:productId">
        <Checkout></Checkout>
-    </Route>
+    </PrivateRoute>
      <PrivateRoute path="/orders">
         <Orders></Orders>
     </PrivateRoute>

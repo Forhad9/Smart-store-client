@@ -28,8 +28,8 @@ const AddProduct = () => {
     const onSubmit = data => {
         const newProduct = { ...data, product_imgUrl: imageUrl }
 
-        const url = `http://localhost:4500/addProducts`
-        console.log(newProduct);
+        const url = `https://blooming-gorge-50916.herokuapp.com/addProducts`
+
 
 
         fetch(url, {

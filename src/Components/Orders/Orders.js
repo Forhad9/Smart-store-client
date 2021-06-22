@@ -10,7 +10,7 @@ const Orders = () => {
     const history = useHistory();
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     useEffect(() => {
-        fetch('http://localhost:4500/orderedProduct?email=' + loggedInUser.email)
+        fetch('https://blooming-gorge-50916.herokuapp.com/orderedProduct?email=' + loggedInUser.email)
             .then(res => res.json())
             .then(data => setOrderedProducts(data))
     }, [])

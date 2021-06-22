@@ -9,7 +9,7 @@ const Checkout = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const history = useHistory();
     useEffect(() => {
-        fetch(`http://localhost:4500/addProducts/${productId}`)
+        fetch(`https://blooming-gorge-50916.herokuapp.com/addProducts/${productId}`)
             .then(res => res.json())
             .then(data =>setProduct(data[0]))
     }, [productId])
@@ -23,7 +23,7 @@ const Checkout = () => {
         customerInfo.customer_email = loggedInUser.email;
         customerInfo.customer_photo = loggedInUser.photo;
         const newOrder = {...customerInfo, product_name, product_price, product_weight, ordersDate};
-        fetch('http://localhost:4500/addOrder', {
+        fetch('https://blooming-gorge-50916.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(newOrder)

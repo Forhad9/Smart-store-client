@@ -12,8 +12,6 @@ import {
 } from "react-router-dom";
 import ManageProduct from '../ManageProduct/ManageProduct';
 
-// import ManageProducts from '../ManageProducts/ManageProducts';
-// import AddProduct from '../AddProduct/AddProduct';
 
 const Admin = () => {
 

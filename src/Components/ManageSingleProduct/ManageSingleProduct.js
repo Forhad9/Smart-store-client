@@ -9,7 +9,7 @@ const ManageSingleProduct = (props) => {
         // eslint-disable-next-line no-restricted-globals
         const deleteConfirm = confirm('Are you sure to delete this product')
         if (deleteConfirm) {
-            fetch(`http://localhost:4500/deleteProduct/${id}`, {
+            fetch(`https://blooming-gorge-50916.herokuapp.com/deleteProduct/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
